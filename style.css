@@ -1167,9 +1167,20 @@ footer {
   .nav-links.open {
     display: flex;
     position: fixed;
-    inset: var(--nav-h) 0 0 0;
-    background: var(--bg);
-    padding: 2rem;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: 600px;
+    background: linear-gradient(
+      180deg,
+      rgba(13, 17, 23, 0.98) 0%,
+      rgba(13, 17, 23, 0.92) 65%,
+      rgba(13, 17, 23, 0.0) 100%
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.5rem 2rem 3rem;
     z-index: 99;
   }
   .hamburger { display: flex; }
