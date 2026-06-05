@@ -198,8 +198,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         return false;
       }
 
+      const origin = window.location.origin;
+      let detail = 'Não foi possível enviar a mensagem.';
+
+      if (origin.startsWith('file://')) {
+        detail = 'Teste o formulário via http://localhost (Live Server), não abrindo o arquivo direto.';
+      } else if (origin.includes('127.0.0.1')) {
+        detail = 'Use http://localhost na barra de endereço ou adicione 127.0.0.1 nos domínios do Pageclip.';
+      } else if (String(error.message || '').includes('Error submitting data')) {
+        detail = 'Domínio não autorizado no Pageclip. Confira se seu domínio está cadastrado no painel.';
+      }
+
       showError(
-        `Algo deu errado (${error.message || 'erro desconhecido'}). Tente novamente ou envie direto para ` +
+        `${detail} Você também pode enviar direto para ` +
         `<a href="mailto:adrianoabreudealmeida@gmail.com">adrianoabreudealmeida@gmail.com</a>.`
       );
       return false;
