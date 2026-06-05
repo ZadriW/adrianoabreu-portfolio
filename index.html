@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen" />
 </head>
 <body>
 
@@ -682,7 +683,7 @@
             <span class="contact-value">(71) 9 8556-6643</span>
           </div>
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener" class="contact-card">
+        <a href="https://github.com/ZadriW" target="_blank" rel="noopener" class="contact-card">
           <i class="fa-brands fa-github"></i>
           <div>
             <span class="contact-label">GitHub</span>
@@ -690,6 +691,108 @@
           </div>
         </a>
       </div>
+
+      <!-- ░ FORMULÁRIO DE CONTATO ░ -->
+      <div class="contact-form-wrap">
+        <div class="contact-form-header">
+          <i class="fa-solid fa-paper-plane accent"></i>
+          <div>
+            <h3 class="contact-form-title">Envie uma mensagem</h3>
+            <p class="contact-form-subtitle mono">
+              <span class="accent">$</span> Descreva seu projeto e entrarei em contato.
+            </p>
+          </div>
+        </div>
+
+        <form
+          id="contact-form"
+          action="https://send.pageclip.co/GwOUBlEdIkC7udlPveDEpZPY879uX9Fx/formulario-email"
+          class="pageclip-form"
+          method="post"
+        >
+          <div class="cform-row">
+            <div class="cform-field">
+              <label for="cf-name" class="cform-label">
+                <span class="accent mono">nome</span> <span class="cform-req">*</span>
+              </label>
+              <input
+                type="text"
+                id="cf-name"
+                name="name"
+                class="cform-input"
+                placeholder="Seu nome"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="cform-field">
+              <label for="cf-email" class="cform-label">
+                <span class="accent mono">email</span> <span class="cform-req">*</span>
+              </label>
+              <input
+                type="email"
+                id="cf-email"
+                name="email"
+                class="cform-input"
+                placeholder="seu@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="cform-field">
+            <label for="cf-subject" class="cform-label">
+              <span class="accent mono">assunto</span> <span class="cform-req">*</span>
+            </label>
+            <input
+              type="text"
+              id="cf-subject"
+              name="subject"
+              class="cform-input"
+              placeholder="Ex: Quero desenvolver um sistema de vendas"
+              required
+            />
+          </div>
+
+          <div class="cform-field">
+            <label for="cf-message" class="cform-label">
+              <span class="accent mono">mensagem</span> <span class="cform-req">*</span>
+            </label>
+            <textarea
+              id="cf-message"
+              name="message"
+              class="cform-textarea"
+              placeholder="Descreva seu projeto, ideia ou dúvida..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="cform-footer">
+            <p class="cform-note mono">
+              <span class="accent">*</span> campos obrigatórios
+            </p>
+            <button type="submit" class="btn btn-primary cform-btn pageclip-form__submit">
+              <span>Enviar mensagem</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Estado de sucesso -->
+        <div class="cform-success" id="cform-success" aria-live="polite">
+          <i class="fa-solid fa-circle-check"></i>
+          <h4>Mensagem enviada!</h4>
+          <p>Obrigado pelo contato. Responderei em breve.</p>
+        </div>
+
+        <!-- Estado de erro -->
+        <div class="cform-error" id="cform-error" aria-live="assertive">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <p id="cform-error-msg">Algo deu errado. Tente novamente ou envie direto para <a href="mailto:adrianoabreudealmeida@gmail.com">adrianoabreudealmeida@gmail.com</a>.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -697,12 +800,13 @@
   <footer>
     <div class="footer-inner">
       <p class="mono footer-code">
-        <span class="accent">&lt;</span>coded by Adriano Abreu<span class="accent"> /&gt;</span>
+        <span class="accent">&lt;</span>coded by Adriano Abreu de Almeida<span class="accent"> /&gt;</span>
       </p>
-      <p class="footer-copy">© 2025 Adriano Abreu de Almeida. Todos os direitos reservados.</p>
+      <p class="footer-copy">© 2026 Adriano Abreu de Almeida. Todos os direitos reservados.</p>
     </div>
   </footer>
 
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   <script src="script.js"></script>
 </body>
 </html>

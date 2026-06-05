@@ -132,3 +132,77 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
   });
 });
+
+/* ── CONTACT FORM (Pageclip) ─────────────────────────────── */
+(function () {
+  const form     = document.getElementById('contact-form');
+  const success  = document.getElementById('cform-success');
+  const errorBox = document.getElementById('cform-error');
+  const errorMsg = document.getElementById('cform-error-msg');
+
+  if (!form || typeof Pageclip === 'undefined') return;
+
+  const fields = form.querySelectorAll('[required]');
+
+  function hideFeedback() {
+    success.classList.remove('is-visible');
+    errorBox.classList.remove('is-visible');
+  }
+
+  function showSuccess() {
+    hideFeedback();
+    form.hidden = true;
+    success.classList.add('is-visible');
+  }
+
+  function showError(message) {
+    hideFeedback();
+    form.hidden = false;
+    errorMsg.innerHTML = message;
+    errorBox.classList.add('is-visible');
+  }
+
+  hideFeedback();
+
+  function validateField(el) {
+    const empty = el.value.trim() === '';
+    const emailInvalid = el.type === 'email' && el.value.trim() !== ''
+      && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+
+    if (empty || emailInvalid) {
+      el.classList.add('invalid');
+      return false;
+    }
+    el.classList.remove('invalid');
+    return true;
+  }
+
+  fields.forEach(f => {
+    f.addEventListener('input', () => validateField(f));
+    f.addEventListener('blur',  () => validateField(f));
+  });
+
+  Pageclip.form(form, {
+    onSubmit: function () {
+      let valid = true;
+      fields.forEach(f => { if (!validateField(f)) valid = false; });
+      if (!valid) {
+        fields[0].focus();
+        return false;
+      }
+      hideFeedback();
+    },
+    onResponse: function (error) {
+      if (!error) {
+        showSuccess();
+        return false;
+      }
+
+      showError(
+        `Algo deu errado (${error.message || 'erro desconhecido'}). Tente novamente ou envie direto para ` +
+        `<a href="mailto:adrianoabreudealmeida@gmail.com">adrianoabreudealmeida@gmail.com</a>.`
+      );
+      return false;
+    }
+  });
+})();
