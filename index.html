@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfólio profissional de Adriano Abreu de Almeida — Desenvolvedor Full Stack com foco em web, UX e automação com IA." />
-  <title>Adriano Abreu — Full Stack Developer</title>
+  <title>Adriano Abreu | Desenvolvedor Full Stack</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,21 +27,46 @@
   <!-- ░░ NAV ░░ -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">
-        <span class="mono">&lt;</span>adrianoabreu<span class="accent">.</span>dev<span class="mono">/&gt;</span>
+      <a
+        href="#hero"
+        class="nav-logo"
+        data-i18n-aria="aria.logoHome"
+        aria-label="Adriano Abreu — voltar ao início"
+      >
+        <img
+          src="images/logo-portfolio.png"
+          alt="Adriano Abreu de Almeida"
+          class="nav-logo-img"
+          width="170"
+          height="46"
+          decoding="async"
+        />
       </a>
       <ul class="nav-links">
-        <li><a href="#about">sobre</a></li>
-        <li><a href="#skills">skills</a></li>
-        <li><a href="#process">processo</a></li>
-        <li><a href="#experience">experiência</a></li>
-        <li><a href="#projects">projetos</a></li>
-        <li><a href="#education">formação</a></li>
-        <li><a href="#contact" class="nav-cta">contato</a></li>
+        <li><a href="#about" data-i18n="nav.about">sobre</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">skills</a></li>
+        <li><a href="#process" data-i18n="nav.process">processo</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">experiência</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">projetos</a></li>
+        <li><a href="#education" data-i18n="nav.education">formação</a></li>
+        <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">contato</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-end">
+        <div class="lang-switcher" id="lang-switcher" role="group" data-i18n-aria="aria.langGroup" aria-label="Selecionar idioma">
+          <button type="button" class="lang-btn is-active" data-lang="pt-BR" data-i18n-aria="aria.lang.pt" aria-label="Português (Brasil)" aria-pressed="true">
+            <svg class="flag-icon" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#009b3a"/><polygon points="10,2.2 17.2,7 10,11.8 2.8,7" fill="#fedf00"/><circle cx="10" cy="7" r="2.3" fill="#002776"/></svg>
+          </button>
+          <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="aria.lang.en" aria-label="English" aria-pressed="false">
+            <svg class="flag-icon" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#b22234"/><rect y="2" width="20" height="2" fill="#fff"/><rect y="6" width="20" height="2" fill="#fff"/><rect y="10" width="20" height="2" fill="#fff"/><rect width="8" height="7.6" fill="#3c3b6e"/></svg>
+          </button>
+          <button type="button" class="lang-btn" data-lang="es" data-i18n-aria="aria.lang.es" aria-label="Español" aria-pressed="false">
+            <svg class="flag-icon" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#c60b1e"/><rect y="3.5" width="20" height="7" fill="#ffc400"/></svg>
+          </button>
+        </div>
+        <button class="hamburger" id="hamburger" data-i18n-aria="aria.menu" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -46,7 +76,7 @@
     <div class="hero-inner">
       <div class="hero-text">
         <p class="hero-greeting mono">
-          <span class="accent">$</span> quem sou eu?
+          <span class="accent">$</span> <span data-i18n="hero.greeting">quem sou eu?</span>
         </p>
         <h1>
           Adriano<br />
@@ -57,17 +87,17 @@
           <span id="typewriter"></span>
           <span class="cursor-blink">|</span>
         </div>
-        <p class="hero-desc">
+        <p class="hero-desc" data-i18n-html="hero.desc">
           Desenvolvedor Full Stack de <span class="accent">Salvador / BA</span>.
           Construo projetos Web com foco em performance, UX e automação inteligente —
           do front-end responsivo ao back-end orientado a dados.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">
-            <i class="fa-solid fa-folder-open"></i> Ver projetos
+            <i class="fa-solid fa-folder-open"></i> <span data-i18n="hero.btn.projects">Ver projetos</span>
           </a>
           <a href="#contact" class="btn btn-ghost">
-            <i class="fa-solid fa-paper-plane"></i> Entre em contato
+            <i class="fa-solid fa-paper-plane"></i> <span data-i18n="hero.btn.contact">Entre em contato</span>
           </a>
         </div>
         <div class="hero-socials">
@@ -77,7 +107,7 @@
           <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://wa.me/+5571985566643?text=Ol%C3%A1,%20gostaria%20de%20tirar%20meu%20projeto%20do%20papel!" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="https://wa.me/+5571985566643?text=Ol%C3%A1,%20gostaria%20de%20tirar%20meu%20projeto%20do%20papel!" target="_blank" rel="noopener" aria-label="WhatsApp" data-i18n-wa>
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>
@@ -88,12 +118,12 @@
         <img src="images/adriano.png" alt="Adriano Abreu de Almeida" class="hero-photo" />
         <div class="photo-badge">
           <i class="fa-solid fa-code"></i>
-          <span>Full Stack Dev</span>
+          <span data-i18n="hero.badge">Full Stack Dev</span>
         </div>
       </div>
     </div>
     <div class="hero-scroll-hint">
-      <span class="mono">scroll_down</span>
+      <span class="mono" data-i18n="hero.scroll">scroll_down</span>
       <i class="fa-solid fa-chevron-down"></i>
     </div>
   </section>
@@ -101,63 +131,63 @@
   <!-- ░░ ABOUT ░░ -->
   <section id="about">
     <div class="section-inner">
-      <div class="section-label mono"><span class="accent">01.</span> sobre</div>
-      <h2 class="section-title">Quem sou eu</h2>
+      <div class="section-label mono" data-i18n-html="about.label"><span class="accent">01.</span> sobre</div>
+      <h2 class="section-title" data-i18n="about.title">Quem sou eu</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>
+          <p data-i18n-html="about.p1">
             Sou <strong>desenvolvedor Full Stack</strong> com
             atuação desde 2023 no mercado — construindo produtos reais, lidando com clientes e
             traduzindo gargalos de rotina em sistemas, integrações, dashboards e fluxos mais controlados.
           </p>
-          <p>
+          <p data-i18n-html="about.p2">
             Minha principal motivação é criar <strong>interfaces que geram resultados e sistemas que funcionam</strong>.
             Tenho interesse especial em UX, SEO, acessibilidade e no uso de
             <strong>inteligências artificiais</strong> (OpenAI, Claude, ML) para automatizar processos
             e criar experiências personalizadas.
           </p>
-          <p>
+          <p data-i18n-html="about.p3">
             Fui sócio da startup <strong>Horus</strong>, plataforma de integração e automação
             de cadastro de processos judiciais — experiência que me forçou a pensar além do código:
             produto, prazo, cliente e resultado. Hoje aplico esse mindset no desenvolvimento Full Stack
             para a <strong>Dental Odonto Master</strong>, onde desenvolvo desde o e-commerce da loja
             até projetos paralelos, desde à criação de ideias, à materialização delas.
           </p>
-          <p>
+          <p data-i18n-html="about.p4">
             A formação em <strong>Engenharia de Software</strong> se soma à vivência operacional: 
             Antes de escolher ferramentas, entendo como o cliente recebe demandas, produz, revisa e mede resultado.
           </p>
           <div class="about-quick">
             <div class="quick-item">
               <i class="fa-solid fa-location-dot accent"></i>
-              <span>Imbuí, Salvador / BA</span>
+              <span data-i18n="about.location">Imbuí, Salvador / BA</span>
             </div>
             <div class="quick-item">
               <i class="fa-solid fa-graduation-cap accent"></i>
-              <span>Eng. Software — UCSAL (2026)</span>
+              <span data-i18n="about.degree">Eng. Software — UCSAL (2026)</span>
             </div>
             <div class="quick-item">
               <i class="fa-solid fa-language accent"></i>
-              <span>Inglês avançado (técnico e fluente)</span>
+              <span data-i18n="about.english">Inglês avançado (técnico e fluente)</span>
             </div>
           </div>
         </div>
         <div class="about-stats">
           <div class="stat-card">
             <span class="stat-num gradient-text">2+</span>
-            <span class="stat-label">Anos de experiência</span>
+            <span class="stat-label" data-i18n="about.stat1">Anos de experiência</span>
           </div>
           <div class="stat-card">
             <span class="stat-num gradient-text">15+</span>
-            <span class="stat-label">Tecnologias dominadas</span>
+            <span class="stat-label" data-i18n="about.stat2">Tecnologias dominadas</span>
           </div>
           <div class="stat-card">
             <span class="stat-num gradient-text">3</span>
-            <span class="stat-label">Certificações</span>
+            <span class="stat-label" data-i18n="about.stat3">Certificações</span>
           </div>
           <div class="stat-card">
             <span class="stat-num gradient-text">∞</span>
-            <span class="stat-label">Projetos em construção</span>
+            <span class="stat-label" data-i18n="about.stat4">Projetos em construção</span>
           </div>
         </div>
       </div>
@@ -167,13 +197,13 @@
   <!-- ░░ SKILLS ░░ -->
   <section id="skills">
     <div class="section-inner">
-      <div class="section-label mono"><span class="accent">02.</span> skills</div>
-      <h2 class="section-title">Stack & Tecnologias</h2>
+      <div class="section-label mono" data-i18n-html="skills.label"><span class="accent">02.</span> skills</div>
+      <h2 class="section-title" data-i18n="skills.title">Stack & Tecnologias</h2>
       <div class="skills-grid">
 
         <div class="skill-group">
           <h3 class="skill-group-title">
-            <i class="fa-solid fa-laptop-code accent"></i> Front-end
+            <i class="fa-solid fa-laptop-code accent"></i> <span data-i18n="skills.frontend">Front-end</span>
           </h3>
           <div class="skill-list">
             <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</div>
@@ -192,7 +222,7 @@
 
         <div class="skill-group">
           <h3 class="skill-group-title">
-            <i class="fa-solid fa-server accent"></i> Back-end
+            <i class="fa-solid fa-server accent"></i> <span data-i18n="skills.backend">Back-end</span>
           </h3>
           <div class="skill-list">
             <div class="skill-tag"><i class="fa-brands fa-python"></i> Python</div>
@@ -208,14 +238,14 @@
 
         <div class="skill-group">
           <h3 class="skill-group-title">
-            <i class="fa-solid fa-database accent"></i> Dados & Infra
+            <i class="fa-solid fa-database accent"></i> <span data-i18n="skills.data">Dados & Infra</span>
           </h3>
           <div class="skill-list">
             <div class="skill-tag">SQLite</div>
             <div class="skill-tag">SQL</div>
-            <div class="skill-tag">Modelagem de Dados</div>
+            <div class="skill-tag" data-i18n="skills.dataModeling">Modelagem de Dados</div>
             <div class="skill-tag"><i class="fa-brands fa-aws"></i> AWS</div>
-            <div class="skill-tag">Cloud Foundation</div>
+            <div class="skill-tag" data-i18n="skills.cloudFoundation">Cloud Foundation</div>
             <div class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</div>
             <div class="skill-tag"><i class="fa-brands fa-github"></i> GitHub</div>
           </div>
@@ -223,36 +253,36 @@
 
         <div class="skill-group">
           <h3 class="skill-group-title">
-            <i class="fa-solid fa-robot accent"></i> IA & Automação
+            <i class="fa-solid fa-robot accent"></i> <span data-i18n="skills.ai">IA & Automação</span>
           </h3>
           <div class="skill-list">
             <div class="skill-tag">OpenAI API</div>
             <div class="skill-tag">Claude API</div>
-            <div class="skill-tag">Machine Learning</div>
-            <div class="skill-tag">Prompt Engineering</div>
-            <div class="skill-tag">Automação de processos</div>
+            <div class="skill-tag" data-i18n="skills.ml">Machine Learning</div>
+            <div class="skill-tag" data-i18n="skills.promptEng">Prompt Engineering</div>
+            <div class="skill-tag" data-i18n="skills.processAuto">Automação de processos</div>
           </div>
         </div>
 
         <div class="skill-group">
           <h3 class="skill-group-title">
-            <i class="fa-solid fa-palette accent"></i> UX & CMS
+            <i class="fa-solid fa-palette accent"></i> <span data-i18n="skills.ux">UX & CMS</span>
           </h3>
           <div class="skill-list">
             <div class="skill-tag"><i class="fa-brands fa-wordpress"></i> WordPress</div>
             <div class="skill-tag">UX Design</div>
             <div class="skill-tag">SEO</div>
-            <div class="skill-tag">Acessibilidade</div>
-            <div class="skill-tag">Design Responsivo</div>
+            <div class="skill-tag" data-i18n="skills.accessibility">Acessibilidade</div>
+            <div class="skill-tag" data-i18n="skills.responsive">Design Responsivo</div>
           </div>
         </div>
 
         <div class="skill-group">
           <h3 class="skill-group-title">
-            <i class="fa-solid fa-plug accent"></i> Integrações
+            <i class="fa-solid fa-plug accent"></i> <span data-i18n="skills.integrations">Integrações</span>
           </h3>
           <div class="skill-list">
-            <div class="skill-tag">Gateways de pagamento</div>
+            <div class="skill-tag" data-i18n="skills.paymentGateways">Gateways de pagamento</div>
             <div class="skill-tag">Flask-WTF / CSRF</div>
             <div class="skill-tag">WSGI / Gunicorn</div>
           </div>
@@ -265,9 +295,9 @@
   <!-- ░░ PROCESS ░░ -->
   <section id="process">
     <div class="section-inner">
-      <div class="section-label mono"><span class="accent">03.</span> processo</div>
-      <h2 class="section-title">Como eu trabalho</h2>
-      <p class="process-sub">
+      <div class="section-label mono" data-i18n-html="process.label"><span class="accent">03.</span> processo</div>
+      <h2 class="section-title" data-i18n="process.title">Como eu trabalho</h2>
+      <p class="process-sub" data-i18n="process.sub">
         Do primeiro contato ao suporte contínuo — um fluxo claro para transformar
         requisições em produtos digitais que funcionam de verdade.
       </p>
@@ -281,8 +311,8 @@
             <i class="fa-solid fa-comments stepper-icon"></i>
           </div>
           <div class="stepper-content">
-            <h3 class="stepper-title">Entendimento da requisição</h3>
-            <p class="stepper-desc">
+            <h3 class="stepper-title" data-i18n="process.s1.title">Entendimento da requisição</h3>
+            <p class="stepper-desc" data-i18n="process.s1.desc">
               Escuto o cliente, compreendo o problema real e levanto requisitos
               funcionais e técnicos. Alinho expectativas, prazo e escopo antes
               de qualquer implementação.
@@ -296,8 +326,8 @@
             <i class="fa-solid fa-sitemap stepper-icon"></i>
           </div>
           <div class="stepper-content">
-            <h3 class="stepper-title">Planejamento & arquitetura</h3>
-            <p class="stepper-desc">
+            <h3 class="stepper-title" data-i18n="process.s2.title">Planejamento & arquitetura</h3>
+            <p class="stepper-desc" data-i18n="process.s2.desc">
               Defino a stack ideal, estruturo o banco de dados, desenho fluxos
               de usuário e organizo sprints. Prototipo interfaces e valido a
               direção com o cliente.
@@ -311,8 +341,8 @@
             <i class="fa-solid fa-code stepper-icon"></i>
           </div>
           <div class="stepper-content">
-            <h3 class="stepper-title">Desenvolvimento & entrega</h3>
-            <p class="stepper-desc">
+            <h3 class="stepper-title" data-i18n="process.s3.title">Desenvolvimento & entrega</h3>
+            <p class="stepper-desc" data-i18n="process.s3.desc">
               Construo front-end e back-end em ciclos iterativos, com versionamento
               Git, testes e entregas parciais. Cada etapa é revisada antes de
               avançar para a próxima.
@@ -326,8 +356,8 @@
             <i class="fa-solid fa-headset stepper-icon"></i>
           </div>
           <div class="stepper-content">
-            <h3 class="stepper-title">Acompanhamento & suporte</h3>
-            <p class="stepper-desc">
+            <h3 class="stepper-title" data-i18n="process.s4.title">Acompanhamento & suporte</h3>
+            <p class="stepper-desc" data-i18n="process.s4.desc">
               Após o deploy, monitoro o sistema, corrijo falhas, implemento
               melhorias e mantenho comunicação ativa — garantindo que o produto
               continue evoluindo junto com o negócio.
@@ -341,8 +371,8 @@
   <!-- ░░ EXPERIENCE ░░ -->
   <section id="experience">
     <div class="section-inner">
-      <div class="section-label mono"><span class="accent">04.</span> experiência</div>
-      <h2 class="section-title">Trajetória Profissional</h2>
+      <div class="section-label mono" data-i18n-html="exp.label"><span class="accent">04.</span> experiência</div>
+      <h2 class="section-title" data-i18n="exp.title">Trajetória Profissional</h2>
 
       <div class="timeline">
 
@@ -352,22 +382,22 @@
           <div class="timeline-card">
             <div class="tcard-header">
               <div>
-                <h3 class="tcard-role">Desenvolvedor Full Stack</h3>
+                <h3 class="tcard-role" data-i18n="exp.om.role">Desenvolvedor Full Stack</h3>
                 <p class="tcard-company">Dental Odonto Master</p>
               </div>
               <div class="tcard-meta">
                 <span class="tcard-period">
-                  <i class="fa-regular fa-calendar"></i> ago/2025 — atual
+                  <i class="fa-regular fa-calendar"></i> <span data-i18n="exp.om.period">ago/2025 — atual</span>
                 </span>
-                <span class="tcard-badge active-badge">Atual</span>
+                <span class="tcard-badge active-badge" data-i18n="exp.om.badge">Atual</span>
               </div>
             </div>
             <ul class="tcard-bullets">
-              <li>Estilização de sistema E-commerce completo com <strong>HTML, CSS, TailwindCSS e JavaScript</strong></li>
-              <li>Implementação de <strong>GraphQL</strong> para consulta estruturada de dados via Wake Commerce Storefront API</li>
-              <li>Desenvolvimento contínuo de interface com foco em <strong>UX Design</strong> e acessibilidade</li>
-              <li>Criação de templates server-side com <strong>Scriban</strong> para renderização dinâmica e otimização de performance</li>
-              <li>Construção do <strong>Dashboard de Eventos</strong> — plataforma de vendas e gestão operacional para feiras e congressos, com catálogo, estoque, promoções e relatórios financeiros</li>
+              <li data-i18n-html="exp.om.b1">Estilização de sistema E-commerce completo com <strong>HTML, CSS, TailwindCSS e JavaScript</strong></li>
+              <li data-i18n-html="exp.om.b2">Implementação de <strong>GraphQL</strong> para consulta estruturada de dados via Wake Commerce Storefront API</li>
+              <li data-i18n-html="exp.om.b3">Desenvolvimento contínuo de interface com foco em <strong>UX Design</strong> e acessibilidade</li>
+              <li data-i18n-html="exp.om.b4">Criação de templates server-side com <strong>Scriban</strong> para renderização dinâmica e otimização de performance</li>
+              <li data-i18n-html="exp.om.b5">Construção do <strong>Dashboard de Eventos</strong> — plataforma de vendas e gestão operacional para feiras e congressos, com catálogo, estoque, promoções e relatórios financeiros</li>
             </ul>
             <div class="tcard-stack">
               <span>Python</span><span>Flask</span><span>TailwindCSS</span>
@@ -382,21 +412,21 @@
           <div class="timeline-card">
             <div class="tcard-header">
               <div>
-                <h3 class="tcard-role">Desenvolvedor Full Stack <span class="tcard-extra">(Sócio)</span></h3>
-                <p class="tcard-company">Horus — Automação de processos judiciais</p>
+                <h3 class="tcard-role" data-i18n-html="exp.horus.role">Desenvolvedor Full Stack <span class="tcard-extra">(Sócio)</span></h3>
+                <p class="tcard-company" data-i18n="exp.horus.company">Horus — Automação de processos judiciais</p>
               </div>
               <div class="tcard-meta">
                 <span class="tcard-period">
-                  <i class="fa-regular fa-calendar"></i> abr/2023 — fev/2025
+                  <i class="fa-regular fa-calendar"></i> <span data-i18n="exp.horus.period">abr/2023 — fev/2025</span>
                 </span>
               </div>
             </div>
             <ul class="tcard-bullets">
-              <li>Desenvolvimento de <strong>integrações e automação de cadastro de processos judiciais</strong>, conectando sistemas e eliminando lançamentos manuais repetitivos</li>
-              <li>Construção de <strong>back-end e APIs</strong> para ingestão, validação e registro estruturado de dados processuais</li>
-              <li>Desenvolvimento de <strong>interfaces web responsivas</strong> para operação, consulta e acompanhamento dos fluxos cadastrados</li>
-              <li>Aplicação de boas práticas de <strong>usabilidade e acessibilidade</strong> em ferramentas usadas no dia a dia jurídico</li>
-              <li>Como <strong>sócio</strong>: definição de produto, alinhamento com clientes, gestão de entregas e interface direta com o mercado</li>
+              <li data-i18n-html="exp.horus.b1">Desenvolvimento de <strong>integrações e automação de cadastro de processos judiciais</strong>, conectando sistemas e eliminando lançamentos manuais repetitivos</li>
+              <li data-i18n-html="exp.horus.b2">Construção de <strong>back-end e APIs</strong> para ingestão, validação e registro estruturado de dados processuais</li>
+              <li data-i18n-html="exp.horus.b3">Desenvolvimento de <strong>interfaces web responsivas</strong> para operação, consulta e acompanhamento dos fluxos cadastrados</li>
+              <li data-i18n-html="exp.horus.b4">Aplicação de boas práticas de <strong>usabilidade e acessibilidade</strong> em ferramentas usadas no dia a dia jurídico</li>
+              <li data-i18n-html="exp.horus.b5">Como <strong>sócio</strong>: definição de produto, alinhamento com clientes, gestão de entregas e interface direta com o mercado</li>
             </ul>
             <div class="tcard-stack">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
@@ -412,22 +442,31 @@
   <!-- ░░ PROJECTS ░░ -->
   <section id="projects">
     <div class="section-inner">
-      <div class="section-label mono"><span class="accent">05.</span> projetos</div>
-      <h2 class="section-title">Projetos em Destaque</h2>
+      <div class="section-label mono" data-i18n-html="proj.label"><span class="accent">05.</span> projetos</div>
+      <h2 class="section-title" data-i18n="proj.title">Projetos em Destaque</h2>
 
       <!-- Featured: Totem -->
       <div class="project-featured">
+        <a
+          href="https://github.com/ZadriW/totem-master"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="proj-featured-link"
+          title="github.com/ZadriW/totem-master"
+          data-i18n-aria="proj.featured.linkAria"
+          aria-label="Ver repositório no GitHub — Totem Master"
+        ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         <div class="project-featured-info">
-          <p class="proj-label mono"><span class="accent">// projeto em destaque</span></p>
-          <h3 class="proj-title">Dashboard de Eventos — Vendas e operação em eventos comerciais</h3>
+          <p class="proj-label mono" data-i18n-html="proj.featured.label"><span class="accent">// projeto em destaque</span></p>
+          <h3 class="proj-title" data-i18n="proj.featured.title">Dashboard de Eventos — Vendas e operação em eventos comerciais</h3>
           <div class="proj-desc-card">
-            <p>
+            <p data-i18n-html="proj.featured.p1">
               Plataforma web desenvolvida para a <strong>Dental Odonto Master</strong>, pensada para
               <strong>feiras, congressos e ações comerciais odontológicas</strong>. Cada evento
               funciona como uma unidade independente: com seu próprio catálogo, estoque, equipe de
               vendedores e promoções — tudo organizado em um só lugar.
             </p>
-            <p>
+            <p data-i18n-html="proj.featured.p2">
               Na prática, o vendedor usa tablet, celular ou computador para montar o pedido do
               cliente, aplicar descontos, registrar o pagamento e emitir o comprovante. O
               administrador acompanha vendas, estoque e resultados financeiros em tempo real —
@@ -440,42 +479,23 @@
           </div>
         </div>
         <div class="project-featured-visual">
-          <div class="code-window">
-            <div class="code-window-bar">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="code-window-title mono">app.py — Totem Odonto Master</span>
-            </div>
-            <pre class="code-block"><code><span class="code-comment"># Plataforma de vendas para eventos comerciais</span>
-<span class="code-comment"># Cada evento = catálogo + estoque + vendedores</span>
-
-<span class="code-kw">def</span> <span class="code-fn">registrar_venda</span>(evento, carrinho, pagamento):
-    <span class="code-comment">"""Aplica promoções e cria pedido pendente."""</span>
-    total = promotions.<span class="code-fn">calcular</span>(evento, carrinho)
-    pedido = transactions.<span class="code-fn">criar</span>(total, pagamento)
-    <span class="code-kw">return</span> pedido
-
-<span class="code-kw">def</span> <span class="code-fn">confirmar_pagamento</span>(pedido, codigo_aut):
-    <span class="code-comment">"""Confirma pagamento e atualiza estoque."""</span>
-    venda = transactions.<span class="code-fn">confirmar</span>(pedido, codigo_aut)
-    stock.<span class="code-fn">baixar</span>(venda.itens)
-    <span class="code-kw">return</span> venda.comprovante</code></pre>
-          </div>
-          <div class="proj-arch">
-            <div class="arch-item">
-              <i class="fa-solid fa-laptop"></i>
-              <span>Vendedor vende</span>
-            </div>
-            <div class="arch-arrow">→</div>
-            <div class="arch-item">
-              <i class="fa-solid fa-database"></i>
-              <span>Sistema registra</span>
-            </div>
-            <div class="arch-arrow">→</div>
-            <div class="arch-item">
-              <i class="fa-solid fa-file-invoice"></i>
-              <span>Admin acompanha</span>
+          <div class="proj-flow">
+            <p class="proj-flow-label mono"><span class="accent">//</span> <span data-i18n="proj.flow.label">fluxo do sistema</span></p>
+            <div class="proj-arch">
+              <div class="arch-item">
+                <span class="arch-icon"><i class="fa-solid fa-laptop"></i></span>
+                <span data-i18n="proj.arch1">Vendedor vende</span>
+              </div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-item">
+                <span class="arch-icon"><i class="fa-solid fa-database"></i></span>
+                <span data-i18n="proj.arch2">Sistema registra</span>
+              </div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-item">
+                <span class="arch-icon"><i class="fa-solid fa-file-invoice"></i></span>
+                <span data-i18n="proj.arch3">Admin acompanha</span>
+              </div>
             </div>
           </div>
         </div>
@@ -484,43 +504,43 @@
           <div class="pf-item">
             <i class="fa-solid fa-calendar-days accent"></i>
             <div>
-              <strong>Organização por evento</strong>
-              <span>Cada feira ou congresso tem catálogo, estoque, vendedores e promoções próprios — sem misturar dados entre ações</span>
+              <strong data-i18n="proj.f1.title">Organização por evento</strong>
+              <span data-i18n="proj.f1.desc">Cada feira ou congresso tem catálogo, estoque, vendedores e promoções próprios — sem misturar dados entre ações</span>
             </div>
           </div>
           <div class="pf-item">
             <i class="fa-solid fa-store accent"></i>
             <div>
-              <strong>Vendas no balcão</strong>
-              <span>Catálogo responsivo, carrinho de compras, checkout e confirmação de pagamento — funciona em PC, tablet e celular</span>
+              <strong data-i18n="proj.f2.title">Vendas no balcão</strong>
+              <span data-i18n="proj.f2.desc">Catálogo responsivo, carrinho de compras, checkout e confirmação de pagamento — funciona em PC, tablet e celular</span>
             </div>
           </div>
           <div class="pf-item">
             <i class="fa-solid fa-tags accent"></i>
             <div>
-              <strong>Promoções automáticas</strong>
-              <span>Descontos, combos e ofertas especiais aplicados automaticamente no carrinho, com o mesmo valor na tela e na cobrança</span>
+              <strong data-i18n="proj.f3.title">Promoções automáticas</strong>
+              <span data-i18n="proj.f3.desc">Descontos, combos e ofertas especiais aplicados automaticamente no carrinho, com o mesmo valor na tela e na cobrança</span>
             </div>
           </div>
           <div class="pf-item">
             <i class="fa-solid fa-boxes-stacked accent"></i>
             <div>
-              <strong>Controle de estoque</strong>
-              <span>Entradas, saídas e ajustes registrados com histórico completo — o estoque só é atualizado quando a venda é confirmada</span>
+              <strong data-i18n="proj.f4.title">Controle de estoque</strong>
+              <span data-i18n="proj.f4.desc">Entradas, saídas e ajustes registrados com histórico completo — o estoque só é atualizado quando a venda é confirmada</span>
             </div>
           </div>
           <div class="pf-item">
             <i class="fa-solid fa-users accent"></i>
             <div>
-              <strong>Dois painéis de acesso</strong>
-              <span>Painel do vendedor para vender e acompanhar pedidos; painel admin para gerenciar eventos, produtos, equipe e finanças</span>
+              <strong data-i18n="proj.f5.title">Dois painéis de acesso</strong>
+              <span data-i18n="proj.f5.desc">Painel do vendedor para vender e acompanhar pedidos; painel admin para gerenciar eventos, produtos, equipe e finanças</span>
             </div>
           </div>
           <div class="pf-item">
             <i class="fa-solid fa-chart-line accent"></i>
             <div>
-              <strong>Relatórios financeiros</strong>
-              <span>Visão de vendas por período, histórico de transações e exportação de relatórios em PDF para fechamento do evento</span>
+              <strong data-i18n="proj.f6.title">Relatórios financeiros</strong>
+              <span data-i18n="proj.f6.desc">Visão de vendas por período, histórico de transações e exportação de relatórios em PDF para fechamento do evento</span>
             </div>
           </div>
         </div>
@@ -533,11 +553,18 @@
           <div class="pc-header">
             <i class="fa-solid fa-folder-open accent pc-icon"></i>
             <div class="pc-links">
-              <a href="https://github.com" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a
+                href="https://odontomaster.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="odontomaster.com.br"
+                data-i18n-aria="proj.p1.linkAria"
+                aria-label="Visitar site da Dental Odonto Master"
+              ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
             </div>
           </div>
-          <h3 class="pc-title">E-commerce Odonto Master</h3>
-          <p class="pc-desc">
+          <h3 class="pc-title" data-i18n="proj.p1.title">E-commerce Odonto Master</h3>
+          <p class="pc-desc" data-i18n="proj.p1.desc">
             Sistema de e-commerce completo para a Dental Odonto Master com
             catálogo dinâmico, carrinho, checkout e integração à Wake Commerce
             Storefront API via GraphQL. Interface estilizada com TailwindCSS
@@ -552,11 +579,34 @@
           <div class="pc-header">
             <i class="fa-solid fa-folder-open accent pc-icon"></i>
             <div class="pc-links">
-              <a href="https://github.com" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a
+                href="https://minhas-financas-sand-one.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Minhas Finanças"
+                data-i18n-aria="proj.p3.linkAria"
+                aria-label="Abrir Minhas Finanças"
+              ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
             </div>
           </div>
-          <h3 class="pc-title">Horus — Processos judiciais</h3>
-          <p class="pc-desc">
+          <h3 class="pc-title" data-i18n="proj.p3.title">Minhas Finanças</h3>
+          <p class="pc-desc" data-i18n-html="proj.p3.desc">
+            Aplicação web de <strong>controle financeiro pessoal</strong> com dashboard,
+            transações, carteira de investimentos e relatórios. Desenvolvida sem backend —
+            dados persistem no navegador via localStorage, com gráficos interativos,
+            salário automático, backup JSON/CSV e interface responsiva.
+          </p>
+          <div class="pc-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Chart.js</span><span>localStorage</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="pc-header">
+            <i class="fa-solid fa-folder-open accent pc-icon"></i>
+          </div>
+          <h3 class="pc-title" data-i18n="proj.p2.title">Horus — Processos judiciais</h3>
+          <p class="pc-desc" data-i18n-html="proj.p2.desc">
             Plataforma desenvolvida na startup Horus (2023–2025) para
             <strong>integração e automação do cadastro de processos judiciais</strong>.
             No back-end, construí fluxos de ingestão e registro automatizado;
@@ -569,24 +619,6 @@
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="pc-header">
-            <i class="fa-solid fa-folder-open accent pc-icon"></i>
-            <div class="pc-links">
-              <a href="https://github.com" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <h3 class="pc-title">Automações com IA</h3>
-          <p class="pc-desc">
-            Scripts e integrações utilizando OpenAI API e Claude API para
-            automatizar processos, gerar conteúdo personalizado e otimizar
-            o fluxo de comunicação entre cliente e vendedor em contextos comerciais.
-          </p>
-          <div class="pc-stack">
-            <span>Python</span><span>OpenAI</span><span>Claude API</span><span>Node.js</span>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -594,8 +626,8 @@
   <!-- ░░ EDUCATION ░░ -->
   <section id="education">
     <div class="section-inner">
-      <div class="section-label mono"><span class="accent">06.</span> formação</div>
-      <h2 class="section-title">Educação & Certificações</h2>
+      <div class="section-label mono" data-i18n-html="edu.label"><span class="accent">06.</span> formação</div>
+      <h2 class="section-title" data-i18n="edu.title">Educação & Certificações</h2>
       <div class="edu-grid">
 
         <div class="edu-card main-edu">
@@ -603,10 +635,10 @@
             <i class="fa-solid fa-university"></i>
           </div>
           <div class="edu-content">
-            <h3>Engenharia de Software</h3>
-            <p class="edu-institution">Universidade Católica do Salvador — UCSAL</p>
-            <p class="edu-period mono"><span class="accent">2022</span> → <span class="accent">dez/2026</span></p>
-            <p class="edu-desc">
+            <h3 data-i18n="edu.degree">Engenharia de Software</h3>
+            <p class="edu-institution" data-i18n="edu.institution">Universidade Católica do Salvador — UCSAL</p>
+            <p class="edu-period mono" data-i18n-html="edu.period"><span class="accent">2022</span> → <span class="accent">dez/2026</span></p>
+            <p class="edu-desc" data-i18n="edu.desc">
               Formação em engenharia de software com foco em desenvolvimento de sistemas,
               estruturas de dados, arquitetura de software, banco de dados e engenharia de requisitos.
             </p>
@@ -617,9 +649,9 @@
           <div class="cert-card">
             <div class="cert-icon"><i class="fa-solid fa-certificate accent"></i></div>
             <div class="cert-info">
-              <h4>Formação Front-End</h4>
+              <h4 data-i18n="edu.c1.title">Formação Front-End</h4>
               <p class="cert-provider">Alura</p>
-              <p class="cert-detail">HTML, CSS, JavaScript e React</p>
+              <p class="cert-detail" data-i18n="edu.c1.detail">HTML, CSS, JavaScript e React</p>
               <span class="cert-year mono">2025</span>
             </div>
           </div>
@@ -627,9 +659,9 @@
           <div class="cert-card">
             <div class="cert-icon"><i class="fa-solid fa-certificate accent"></i></div>
             <div class="cert-info">
-              <h4>Banco de Dados</h4>
+              <h4 data-i18n="edu.c2.title">Banco de Dados</h4>
               <p class="cert-provider">Alura</p>
-              <p class="cert-detail">SQL e Modelagem de Dados</p>
+              <p class="cert-detail" data-i18n="edu.c2.detail">SQL e Modelagem de Dados</p>
               <span class="cert-year mono">2025</span>
             </div>
           </div>
@@ -637,9 +669,9 @@
           <div class="cert-card">
             <div class="cert-icon"><i class="fa-brands fa-aws accent"></i></div>
             <div class="cert-info">
-              <h4>AWS Academy Cloud Foundation</h4>
+              <h4 data-i18n="edu.c3.title">AWS Academy Cloud Foundation</h4>
               <p class="cert-provider">Amazon Web Services</p>
-              <p class="cert-detail">Cloud Computing & DevOps Fundamentals</p>
+              <p class="cert-detail" data-i18n="edu.c3.detail">Cloud Computing & DevOps Fundamentals</p>
               <span class="cert-year mono">2022</span>
             </div>
           </div>
@@ -652,9 +684,9 @@
   <!-- ░░ CONTACT ░░ -->
   <section id="contact">
     <div class="section-inner">
-      <div class="section-label mono"><span class="accent">07.</span> contato</div>
-      <h2 class="section-title">Vamos conversar?</h2>
-      <p class="contact-sub">
+      <div class="section-label mono" data-i18n-html="contact.label"><span class="accent">07.</span> contato</div>
+      <h2 class="section-title" data-i18n="contact.title">Vamos conversar?</h2>
+      <p class="contact-sub" data-i18n="contact.sub">
         Aberto a oportunidades, freelances e colaborações.
         Entre em contato, vamos desenvolver!
       </p>
@@ -662,28 +694,28 @@
         <a href="mailto:adrianoabreudealmeida@gmail.com" class="contact-card">
           <i class="fa-solid fa-envelope"></i>
           <div>
-            <span class="contact-label">E-mail</span>
+            <span class="contact-label" data-i18n="contact.email">E-mail</span>
             <span class="contact-value">adrianoabreudealmeida@gmail.com</span>
           </div>
         </a>
         <a href="https://linkedin.com/in/adrianoabreuti" target="_blank" rel="noopener" class="contact-card">
           <i class="fa-brands fa-linkedin-in"></i>
           <div>
-            <span class="contact-label">LinkedIn</span>
+            <span class="contact-label" data-i18n="contact.linkedin">LinkedIn</span>
             <span class="contact-value">linkedin.com/in/adrianoabreuti</span>
           </div>
         </a>
         <a href="tel:+5571985566643" class="contact-card">
           <i class="fa-solid fa-phone"></i>
           <div>
-            <span class="contact-label">Telefone / WhatsApp</span>
+            <span class="contact-label" data-i18n="contact.phone">Telefone / WhatsApp</span>
             <span class="contact-value">(71) 9 8556-6643</span>
           </div>
         </a>
         <a href="https://github.com/ZadriW" target="_blank" rel="noopener" class="contact-card">
           <i class="fa-brands fa-github"></i>
           <div>
-            <span class="contact-label">GitHub</span>
+            <span class="contact-label" data-i18n="contact.github">GitHub</span>
             <span class="contact-value">github.com/adrianoabreuti</span>
           </div>
         </a>
@@ -694,8 +726,8 @@
         <div class="contact-form-header">
           <i class="fa-solid fa-paper-plane accent"></i>
           <div>
-            <h3 class="contact-form-title">Envie uma mensagem</h3>
-            <p class="contact-form-subtitle mono">
+            <h3 class="contact-form-title" data-i18n="contact.form.title">Envie uma mensagem</h3>
+            <p class="contact-form-subtitle mono" data-i18n-html="contact.form.sub">
               <span class="accent">$</span> Descreva seu projeto e entrarei em contato.
             </p>
           </div>
@@ -705,33 +737,50 @@
           id="contact-form"
           action="https://send.pageclip.co/GwOUBlEdIkC7udlPveDEpZPY879uX9Fx/formulario-email"
           method="post"
+          novalidate
         >
+          <!-- Honeypot anti-bot (oculto para humanos) -->
+          <div class="cform-honeypot" aria-hidden="true">
+            <label for="cf-website">Website</label>
+            <input
+              type="text"
+              id="cf-website"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
           <div class="cform-row">
             <div class="cform-field">
               <label for="cf-name" class="cform-label">
-                <span class="accent mono">nome</span> <span class="cform-req">*</span>
+                <span class="accent mono" data-i18n="contact.form.name">nome</span> <span class="cform-req">*</span>
               </label>
               <input
                 type="text"
                 id="cf-name"
                 name="name"
                 class="cform-input"
+                data-i18n-placeholder="contact.form.namePh"
                 placeholder="Seu nome"
                 autocomplete="name"
+                maxlength="100"
                 required
               />
             </div>
             <div class="cform-field">
               <label for="cf-email" class="cform-label">
-                <span class="accent mono">email</span> <span class="cform-req">*</span>
+                <span class="accent mono" data-i18n="contact.form.email">email</span> <span class="cform-req">*</span>
               </label>
               <input
                 type="email"
                 id="cf-email"
                 name="email"
                 class="cform-input"
+                data-i18n-placeholder="contact.form.emailPh"
                 placeholder="seu@email.com"
                 autocomplete="email"
+                maxlength="254"
                 required
               />
             </div>
@@ -739,38 +788,57 @@
 
           <div class="cform-field">
             <label for="cf-subject" class="cform-label">
-              <span class="accent mono">assunto</span> <span class="cform-req">*</span>
+              <span class="accent mono" data-i18n="contact.form.subject">assunto</span> <span class="cform-req">*</span>
             </label>
             <input
               type="text"
               id="cf-subject"
               name="subject"
               class="cform-input"
+              data-i18n-placeholder="contact.form.subjectPh"
               placeholder="Ex: Quero desenvolver um sistema de vendas"
+              maxlength="200"
               required
             />
           </div>
 
           <div class="cform-field">
             <label for="cf-message" class="cform-label">
-              <span class="accent mono">mensagem</span> <span class="cform-req">*</span>
+              <span class="accent mono" data-i18n="contact.form.message">mensagem</span> <span class="cform-req">*</span>
             </label>
             <textarea
               id="cf-message"
               name="message"
               class="cform-textarea"
+              data-i18n-placeholder="contact.form.messagePh"
               placeholder="Descreva seu projeto, ideia ou dúvida..."
               rows="5"
+              maxlength="5000"
               required
             ></textarea>
           </div>
 
+          <div class="cform-captcha-wrap">
+            <p class="cform-captcha-label mono" data-i18n="contact.captcha.label">verificação</p>
+            <!-- Widget dentro do form: Turnstile injeta cf-turnstile-response aqui.
+                 O campo é removido do DOM em onSubmit (antes da serialização do Pageclip)
+                 e substituído pelo campo legível "verificacao". -->
+            <div class="cform-captcha" id="turnstile-widget" role="group" aria-labelledby="captcha-desc"></div>
+            <p class="cform-captcha-hint" id="captcha-desc" data-i18n="contact.captcha.hint">
+              Confirme que você é humano para enviar a mensagem.
+            </p>
+            <p class="cform-captcha-error" id="cform-captcha-error" role="alert" hidden data-i18n="contact.error.captcha">
+              Complete a verificação de segurança antes de enviar.
+            </p>
+            <input type="hidden" name="verificacao" id="cf-captcha-status" value="Reprovado" />
+          </div>
+
           <div class="cform-footer">
-            <p class="cform-note mono">
+            <p class="cform-note mono" data-i18n-html="contact.form.required">
               <span class="accent">*</span> campos obrigatórios
             </p>
             <button type="submit" class="btn btn-primary cform-btn pageclip-form__submit">
-              <span>Enviar mensagem</span>
+              <span data-i18n="contact.form.submit">Enviar mensagem</span>
             </button>
           </div>
         </form>
@@ -778,14 +846,14 @@
         <!-- Estado de sucesso -->
         <div class="cform-success" id="cform-success" aria-live="polite">
           <i class="fa-solid fa-circle-check"></i>
-          <h4>Mensagem enviada!</h4>
-          <p>Obrigado pelo contato. Responderei em breve.</p>
+          <h4 data-i18n="contact.success.title">Mensagem enviada!</h4>
+          <p data-i18n="contact.success.desc">Obrigado pelo contato. Responderei em breve.</p>
         </div>
 
         <!-- Estado de erro -->
         <div class="cform-error" id="cform-error" aria-live="assertive">
           <i class="fa-solid fa-triangle-exclamation"></i>
-          <p id="cform-error-msg">Algo deu errado. Tente novamente ou envie direto para <a href="mailto:adrianoabreudealmeida@gmail.com">adrianoabreudealmeida@gmail.com</a>.</p>
+          <p id="cform-error-msg" data-i18n-html="contact.error.default">Algo deu errado. Tente novamente ou envie direto para <a href="mailto:adrianoabreudealmeida@gmail.com">adrianoabreudealmeida@gmail.com</a>.</p>
         </div>
       </div>
 
@@ -798,11 +866,17 @@
       <p class="mono footer-code">
         <span class="accent">&lt;</span>coded by Adriano Abreu de Almeida<span class="accent"> /&gt;</span>
       </p>
-      <p class="footer-copy">© 2026 Adriano Abreu de Almeida. Todos os direitos reservados.</p>
+      <p class="footer-copy" data-i18n="footer.copy">© 2026 Adriano Abreu de Almeida. Todos os direitos reservados.</p>
     </div>
   </footer>
 
+  <script src="security.config.js"></script>
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/jquery.nicescroll.min.js"></script>
+  <script src="nicescroll.init.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
   <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
